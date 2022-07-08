@@ -8,6 +8,8 @@ SDL_Rect srcR, destR;
 GameObject* player;
 GameObject* enemy;
 
+SDL_Renderer* Game::renderer = nullptr;
+
 Game::Game() {
 
 }
@@ -37,7 +39,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		// RENDERER
 		renderer = SDL_CreateRenderer(window, -1, 0);
 		if (renderer) {
-			SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+			SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
 			std::cout << "Renderer Created!...\n";
 		}
 		
@@ -47,8 +49,8 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		isRunning = false;
 	}
 	
-	player = new GameObject("assets/monk.gif", renderer, 0, 0);
-	enemy = new GameObject("assets/enemy.gif", renderer, 64, 64);
+	player = new GameObject("assets/monk.gif", 0, 0);
+	enemy = new GameObject("assets/enemy.gif", 64, 64);
 }
 
 // EVENT HANDLER

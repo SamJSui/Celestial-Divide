@@ -34,6 +34,7 @@
     <ProjectGuid>{0EA65545-03EA-4E70-A958-AEBDC8B6D915}</ProjectGuid>
     <RootNamespace>LegendsInfinity</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Celestial-Divide</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
