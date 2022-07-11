@@ -2,6 +2,8 @@
 #include "GameObject.h"
 #include "TextureManager.h"
 #include "Map.h"
+#include "ECS.h"
+#include "Components.h"
 
 SDL_Texture* playerTex;
 SDL_Rect srcR, destR;
@@ -11,6 +13,9 @@ GameObject* enemy;
 Map* map;
 
 SDL_Renderer* Game::renderer = nullptr;
+
+Manager manager;
+auto& newPlayer(manager.addEntity());
 
 Game::Game() {
 
@@ -54,6 +59,8 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 	player = new GameObject("assets/monk.gif", 0, 0);
 	enemy = new GameObject("assets/enemy.gif", 64, 64);
 	map = new Map();
+
+	newPlayer.addComponent<PositionComponent>();
 }
 
 // EVENT HANDLER
@@ -73,9 +80,10 @@ void Game::handleEvents() {
 
 // UPDATE
 void Game::update() {
-	count++;
 	player->Update();
 	enemy->Update();
+	manager.update();
+	std::cout << "x: " << newPlayer.getComponent<PositionComponent>().x() << " y: " << newPlayer.getComponent<PositionComponent>().y() << std::endl;
 }
 
 // RENDERER

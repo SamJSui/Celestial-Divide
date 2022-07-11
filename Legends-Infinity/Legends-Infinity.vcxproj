@@ -26,6 +26,8 @@
     <ClCompile Include="Src\TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Src\Components.h" />
+    <ClInclude Include="Src\ECS.h" />
     <ClInclude Include="Src\Game.h" />
     <ClInclude Include="Src\GameObject.h" />
     <ClInclude Include="Src\Map.h" />
@@ -84,8 +86,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\iPlai\OneDrive\Dev\SDL2_image-2.0.1\include;C:\Users\iPlai\OneDrive\Dev\SDL2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\iPlai\OneDrive\Dev\SDL2_image-2.0.1\lib\x64;C:\Users\iPlai\OneDrive\Dev\SDL2\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\samue\OneDrive\Dev\SDL2_image-2.0.1\include;C:\Users\samue\OneDrive\Dev\SDL2\include;C:\Users\iPlai\OneDrive\Dev\SDL2_image-2.0.1\include;C:\Users\iPlai\OneDrive\Dev\SDL2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\samue\OneDrive\Dev\SDL2_image-2.0.1\lib\x64;C:\Users\samue\OneDrive\Dev\SDL2\lib\x64;C:\Users\iPlai\OneDrive\Dev\SDL2_image-2.0.1\lib\x64;C:\Users\iPlai\OneDrive\Dev\SDL2\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -107,11 +109,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\iPlai\OneDrive\Dev\SDL2_image-2.0.1\include;C:\Users\iPlai\OneDrive\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\samue\OneDrive\Dev\SDL2_image-2.0.1\include;C:\Users\samue\OneDrive\Dev\SDL2\include;C:\Users\iPlai\OneDrive\Dev\SDL2_image-2.0.1\include;C:\Users\iPlai\OneDrive\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>C:\Users\iPlai\OneDrive\Dev\SDL2_image-2.0.1\lib\x64;C:\Users\iPlai\OneDrive\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\samue\OneDrive\Dev\SDL2_image-2.0.1\lib\x64;C:\Users\samue\OneDrive\Dev\SDL2\lib\x64;C:\Users\iPlai\OneDrive\Dev\SDL2_image-2.0.1\lib\x64;C:\Users\iPlai\OneDrive\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
