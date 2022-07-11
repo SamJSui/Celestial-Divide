@@ -1,21 +1,15 @@
 #include "Game.h"
-#include "GameObject.h"
 #include "TextureManager.h"
 #include "Map.h"
-#include "ECS.h"
-#include "Components.h"
+#include "ECS/Components.h"
+#include "Vector2D.h"
 
-SDL_Texture* playerTex;
-SDL_Rect srcR, destR;
-
-GameObject* player;
-GameObject* enemy;
 Map* map;
+Manager manager;	
 
 SDL_Renderer* Game::renderer = nullptr;
 
-Manager manager;
-auto& newPlayer(manager.addEntity());
+auto& player(manager.addEntity());
 
 Game::Game() {
 
@@ -56,11 +50,13 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		isRunning = false;
 	}
 	
-	player = new GameObject("assets/monk.gif", 0, 0);
-	enemy = new GameObject("assets/enemy.gif", 64, 64);
 	map = new Map();
 
-	newPlayer.addComponent<PositionComponent>();
+	// ECS
+
+	player.addComponent<TransformComponent>();
+	player.addComponent<SpriteComponent>("assets/player.gif");
+
 }
 
 // EVENT HANDLER
@@ -80,19 +76,22 @@ void Game::handleEvents() {
 
 // UPDATE
 void Game::update() {
-	player->Update();
-	enemy->Update();
+	manager.refresh();
 	manager.update();
-	std::cout << "x: " << newPlayer.getComponent<PositionComponent>().x() << " y: " << newPlayer.getComponent<PositionComponent>().y() << std::endl;
+	player.getComponent<TransformComponent>().position.Add(Vector2D(1, 1));
+	if (player.getComponent<TransformComponent>().position.x < 100) {
+		player.getComponent<SpriteComponent>().setTex("assets/enemy.gif");
+	}
+	else {
+		player.getComponent<SpriteComponent>().setTex("assets/player.gif");
+	}
 }
 
 // RENDERER
 void Game::render() {
 	SDL_RenderClear(renderer);
 	map->DrawMap();
-	player->Render();
-	enemy->Render();
-	SDL_RenderCopy(renderer, playerTex, NULL, &destR);
+	manager.draw();
 	SDL_RenderPresent(renderer);
 }
 
