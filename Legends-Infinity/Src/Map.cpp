@@ -25,8 +25,8 @@ int lvl1[20][25] = {
 };
 
 Map::Map() {
-	dirt = TextureManager::LoadTexture("assets/dirt.png"); // 2
-	rock = TextureManager::LoadTexture("assets/rock.png"); // 1
+	dirt = TextureManager::LoadTexture("assets/dirt_inner.png"); // 2
+	grass = TextureManager::LoadTexture("assets/grass_inner.png"); // 1
 	water = TextureManager::LoadTexture("assets/water.png"); // 0
 
 	LoadMap(lvl1);
@@ -64,7 +64,7 @@ void Map::DrawMap() {
 					TextureManager::Draw(water, src, dest);
 					break;
 				case 1:
-					TextureManager::Draw(rock, src, dest);
+					TextureManager::Draw(grass, src, dest);
 					break;
 				case 2:
 					TextureManager::Draw(dirt, src, dest);

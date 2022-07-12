@@ -13,6 +13,7 @@ private:
 	SDL_Texture* dirt;
 	SDL_Texture* rock; 
 	SDL_Texture* water;
+	SDL_Texture* grass;
 
 	int map[20][25];
 };

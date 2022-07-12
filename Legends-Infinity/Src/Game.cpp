@@ -8,7 +8,7 @@ Map* map;
 Manager manager;	
 
 SDL_Renderer* Game::renderer = nullptr;
-
+SDL_Event Game::event;
 auto& player(manager.addEntity());
 
 Game::Game() {
@@ -18,7 +18,6 @@ Game::~Game() {
 
 }
 
-// INIT
 void Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen) {
 	int flags = 0;
 	if (fullscreen) {
@@ -50,18 +49,17 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		isRunning = false;
 	}
 	
+	// MAP INSTANTIATION
 	map = new Map();
 
 	// ECS
-
 	player.addComponent<TransformComponent>();
 	player.addComponent<SpriteComponent>("assets/player.gif");
-
+	player.addComponent<KeyboardController>();
 }
 
 // EVENT HANDLER
 void Game::handleEvents() {
-	SDL_Event event;
 	SDL_PollEvent(&event);
 
 	switch (event.type) {
@@ -78,7 +76,6 @@ void Game::handleEvents() {
 void Game::update() {
 	manager.refresh();
 	manager.update();
-	player.getComponent<TransformComponent>().position.Add(Vector2D(1, 1));
 	if (player.getComponent<TransformComponent>().position.x < 100) {
 		player.getComponent<SpriteComponent>().setTex("assets/enemy.gif");
 	}

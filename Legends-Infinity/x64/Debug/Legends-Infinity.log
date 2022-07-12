@@ -1,0 +1,10 @@
+﻿  Game.cpp
+C:\Users\iPlai\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(31,27): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\iPlai\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(32,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\iPlai\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(34,27): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\iPlai\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(35,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\iPlai\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(38,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\iPlai\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(39,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Map.cpp
+  Generating Code...
+  Legends-Infinity.vcxproj -> C:\Users\iPlai\OneDrive\Dev\Celestial-Divide\x64\Debug\Celestial-Divide.exe

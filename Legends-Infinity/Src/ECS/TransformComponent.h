@@ -6,6 +6,10 @@
 class TransformComponent : public Component {
 public:
 	Vector2D position;
+	Vector2D velocity;
+	
+	int speed = 3;
+
 
 	TransformComponent() {
 		position.x = 0.0;
@@ -16,14 +20,20 @@ public:
 		position.x = x;
 		position.y = y;
 	}
+	void init() override {
+		velocity.x = 0;
+		velocity.y = 0;
+	}
 	void update() override {
-		position.x++;
-		position.y++;
+		position.x += velocity.x * speed;
+		position.y += velocity.y * speed;
 	}
 	int x() { return position.x; }
 	void x(int x) { position.x = x; }
+
 	int y() { return position.y; }
 	void y(int y) { position.y = y; }
+
 	void setPos(int x, int y) {
 		position.x = x;
 		position.y = y;
