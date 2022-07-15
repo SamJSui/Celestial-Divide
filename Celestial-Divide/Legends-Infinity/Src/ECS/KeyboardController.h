@@ -41,29 +41,29 @@ public:
 
 		if (Game::event.type == SDL_KEYUP) {
 			switch (Game::event.key.keysym.sym) {
-			case SDLK_w:
-			case SDLK_DOWN:
-				transform->velocity.y = 0;
-				sprite->setTex("assets/slime.png");
-				break;
-			case SDLK_a:
-			case SDLK_LEFT:
-				transform->velocity.x = 0;
-				sprite->setTex("assets/slime.png");
-				break;
-			case SDLK_d:
-			case SDLK_RIGHT:
-				transform->velocity.x = 0;
-				sprite->setTex("assets/slime.png");
-				break;
-			case SDLK_s:
-			case SDLK_UP:
-				transform->velocity.y = 0;
-				sprite->setTex("assets/slime.png");
-				break;
-			default:
-				break;
-			}
+				case SDLK_w:
+				case SDLK_DOWN:
+					transform->velocity.y = 0;
+					sprite->setTex("assets/slime.png");
+					break;
+				case SDLK_a:
+				case SDLK_LEFT:
+					transform->velocity.x = 0;
+					sprite->setTex("assets/slime.png");
+					break;
+				case SDLK_d:
+				case SDLK_RIGHT:
+					transform->velocity.x = 0;
+					sprite->setTex("assets/slime.png");
+					break;
+				case SDLK_s:
+				case SDLK_UP:
+					transform->velocity.y = 0;
+					sprite->setTex("assets/slime.png");
+					break;
+				default:
+					break;
+				}
 		}
 	}
 private:
