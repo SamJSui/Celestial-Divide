@@ -1,1 +1,26 @@
-﻿  Legends-Infinity.vcxproj -> C:\Users\samue\OneDrive\Dev\Celestial-Divide\x64\Debug\Celestial-Divide.exe
+﻿  Collision.cpp
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(47,27): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(48,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(50,27): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(51,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(54,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(55,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Game.cpp
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(47,27): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(48,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(50,27): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(51,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(54,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(55,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\ECS.h(81,33): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\Game.cpp(76): message : see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,double,double,int,int,int>(double &&,double &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              T=TransformComponent
+          ]
+  Generating Code...
+  Legends-Infinity.vcxproj -> C:\Users\samue\OneDrive\Dev\Celestial-Divide\x64\Debug\Celestial-Divide.exe
