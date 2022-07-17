@@ -2,14 +2,14 @@
 #include <climits>
 #include <chrono>
 
-Game *game = nullptr;
+Game* game = nullptr;
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv) {	
 	const int FPS = 60;
 	const int frameDelay = 1000 / FPS;
 
 	game = new Game();
-	game->init("Legends Infinity", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 640, false);
+	game->init("Celestial Divide", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 640, false);
 
 	while (game->running()) {
 		auto start = std::chrono::steady_clock::now();

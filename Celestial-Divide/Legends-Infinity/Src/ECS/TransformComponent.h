@@ -19,8 +19,9 @@ public:
 		position.Zero();
 	}
 
-	TransformComponent(int sc) {
-		position.Zero();
+	TransformComponent(int sc) { // SCALE
+		position.x = 400;
+		position.y = 320;
 		scale = sc;
 	}
 
@@ -41,8 +42,6 @@ public:
 	}
 
 	void update() override {
-		position.x += velocity.x * speed;
-		position.y += velocity.y * speed;
 	}
 	int x() { return position.x; }
 	void x(int x) { position.x = x; }
