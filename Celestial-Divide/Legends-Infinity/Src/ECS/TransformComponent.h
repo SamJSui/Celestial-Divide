@@ -42,6 +42,8 @@ public:
 	}
 
 	void update() override {
+		position.x += velocity.x * speed;
+		position.y += velocity.y * speed;
 	}
 	int x() { return position.x; }
 	void x(int x) { position.x = x; }

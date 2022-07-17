@@ -1,10 +1,24 @@
 ﻿  Game.cpp
-C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(46,27): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(47,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(49,27): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
-C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(50,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(53,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(54,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\Game.cpp(108,50): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\Game.cpp(109,50): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(48,27): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(49,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(51,27): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(52,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(55,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TransformComponent.h(56,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TileComponent.h(20,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TileComponent.h(21,16): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TileComponent.h(37,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\TileComponent.h(38,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\Game.cpp(105,66): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\Game.cpp(106,66): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\ECS\ECS.h(81,33): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\samue\OneDrive\Dev\Celestial-Divide\Legends-Infinity\Src\Game.cpp(64): message : see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,double,double,int,int,int>(double &&,double &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              T=TransformComponent
+          ]
   Legends-Infinity.vcxproj -> C:\Users\samue\OneDrive\Dev\Celestial-Divide\x64\Debug\Celestial-Divide.exe
