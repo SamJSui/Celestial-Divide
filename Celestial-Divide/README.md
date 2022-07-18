@@ -1,4 +1,6 @@
-# **CPU Instruction Cycle**
+# **Celestial Divide**
+
+Blog Post: [Here](https://samjsui.github.io/blog/2022/celestial-divide/)
 
 ## **Description**
 
