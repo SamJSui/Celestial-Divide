@@ -13,6 +13,8 @@ SDL_Event Game::event;
 
 SDL_Rect Game::camera = {0, 0, 800, 640};
 
+AssetManager* Game::assets = new AssetManager(&manager);
+
 bool Game::isRunning = false;
 
 auto& player(manager.addEntity());
@@ -53,22 +55,30 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 	}
 	else isRunning = false;
 	
+	assets->AddTexture("terrain", "assets/terrain_ss.png");
+	assets->AddTexture("player", "assets/player_anims.png");
+	assets->AddTexture("projectile", "assets/proj.png");
+	assets->AddTexture("slime", "assets/slime.png");
+
 	// MAP INSTANTIATION
-	map = new Map("assets/terrain_ss.png", 3, 32);
+	map = new Map("terrain", 3, 32);
 
 	// ECS
 	map->LoadMap("assets/map.map", 25, 20);
 
 	player.addComponent<TransformComponent>(800.0, 640.0, 32, 32, 4);
-	player.addComponent<SpriteComponent>("assets/player_anims.png", true);
+	player.addComponent<SpriteComponent>("player", true);
 	player.addComponent<KeyboardController>();
 	player.addComponent<ColliderComponent>("player");
 	player.addGroup(groupPlayers);
+
+	assets->CreateProjectile(Vector2D(600, 600), Vector2D(2,0), 200,2, "projectile");
 }
 
 auto& tiles(manager.getGroup(Game::groupMap));
 auto& players(manager.getGroup(Game::groupPlayers));
 auto& colliders(manager.getGroup(Game::groupColliders));
+auto& projectiles(manager.getGroup(Game::groupProjectiles));
 
 // EVENT HANDLER
 void Game::handleEvents() {
@@ -100,8 +110,15 @@ void Game::update() {
 		}
 	}
 
-	camera.x = player.getComponent<TransformComponent>().position.x - 400;
-	camera.y = player.getComponent<TransformComponent>().position.y - 320;
+	for (auto& p : projectiles) {
+		if (Collision::AABB(player.getComponent<ColliderComponent>().collider, p->getComponent<ColliderComponent>().collider)) {
+			std::cout << "Hit Player\n";
+			p->destroy();
+		}
+	}
+
+	camera.x = static_cast<int>(player.getComponent<TransformComponent>().position.x - 400);
+	camera.y = static_cast<int>(player.getComponent<TransformComponent>().position.y - 320);
 
 	if (camera.x < 0) camera.x = 0;
 	if (camera.y < 0) camera.y = 0;
@@ -119,6 +136,9 @@ void Game::render() {
 		c->draw();
 	}
 	for (auto& p : players) { // PLAYERS
+		p->draw();
+	}
+	for (auto& p : projectiles) { // PLAYERS
 		p->draw();
 	}
 	SDL_RenderPresent(renderer);

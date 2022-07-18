@@ -1,11 +1,14 @@
 #pragma once
+
 #include "SDL.h"
 #include "SDL_image.h"
 #include <stdio.h>
 #include <iostream>
 #include <vector>
+#include "AssetManager.h"
 
 class ColliderComponent;
+class AssetManager;
 
 class Game {
 public: 
@@ -23,11 +26,13 @@ public:
 	static SDL_Event event;
 	static bool isRunning;
 	static SDL_Rect camera;
+	static AssetManager* assets;
 
 	enum groupLabels : std::size_t {
 		groupMap,
 		groupPlayers,
-		groupColliders
+		groupColliders,
+		groupProjectiles
 	};
 
 private:

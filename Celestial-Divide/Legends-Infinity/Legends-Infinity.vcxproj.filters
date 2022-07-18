@@ -42,20 +42,11 @@
     <ClCompile Include="Src\ECS\ECS.cpp">
       <Filter>Source Files\ECS</Filter>
     </ClCompile>
+    <ClCompile Include="Src\AssetManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Src\Game.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\TextureManager.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\GameObject.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Map.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Src\ECS\ECS.h">
       <Filter>Source Files\ECS</Filter>
     </ClInclude>
@@ -68,22 +59,40 @@
     <ClInclude Include="Src\ECS\SpriteComponent.h">
       <Filter>Source Files\ECS</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Vector2D.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Src\ECS\KeyboardController.h">
       <Filter>Source Files\ECS</Filter>
     </ClInclude>
     <ClInclude Include="Src\ECS\ColliderComponent.h">
       <Filter>Source Files\ECS</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Collision.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Src\ECS\TileComponent.h">
       <Filter>Source Files\ECS</Filter>
     </ClInclude>
     <ClInclude Include="Src\ECS\Animation.h">
+      <Filter>Source Files\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Collision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\TextureManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Vector2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\AssetManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ECS\ProjectileComponent.h">
       <Filter>Source Files\ECS</Filter>
     </ClInclude>
   </ItemGroup>

@@ -3,6 +3,7 @@
 #include "../Game.h"
 #include "ECS.h"
 #include "Components.h"
+#include "../AssetManager.h"
 
 class KeyboardController : public Component {
 public:
@@ -36,6 +37,7 @@ public:
 					transform->velocity.y = 1;
 					sprite->play("Walk");
 					break;
+				case SDLK_SPACE:
 				default:
 					break;
 			}
@@ -66,6 +68,10 @@ public:
 					break;
 				case SDLK_ESCAPE:
 					Game::isRunning = false;
+				case SDLK_SPACE:
+					Game::assets->CreateProjectile(Vector2D((entity->getComponent<TransformComponent>().position.x + entity->getComponent<TransformComponent>().width * entity->getComponent<TransformComponent>().scale),
+															entity->getComponent<TransformComponent>().position.y + entity->getComponent<TransformComponent>().height),
+													Vector2D(2, 0), 200, 2, "projectile");
 				default:
 					break;
 				}
